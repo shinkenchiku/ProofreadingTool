@@ -53,7 +53,7 @@ else
     fi
 
     PANDOC_VERSION="3.6.4"
-    PANDOC_FILENAME="pandoc-${PANDOC_VERSION}-macOS-${PANDOC_ARCH}.zip"
+    PANDOC_FILENAME="pandoc-${PANDOC_VERSION}-${PANDOC_ARCH}-macOS.zip"
     PANDOC_URL="https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/${PANDOC_FILENAME}"
 
     echo "📦 Pandoc をダウンロード中..."
