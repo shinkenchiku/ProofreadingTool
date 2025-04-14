@@ -15,6 +15,10 @@
 
 準備中
 
+### うまくいかない場合は
+
+技術者に確認してください。バージョンの際などの可能性があります
+
 ## インストールされたもの
 
 ### APP
@@ -44,7 +48,7 @@ VScodeのextentionです。
 
 ## How To
 
-### フォルダ校正
+### フォルダ構成
 
 ``` plane_text
 .
@@ -53,7 +57,7 @@ VScodeのextentionです。
 ├── original                # originalの原稿を入れるフォルダ。
 ├── proofread/              # 校正を行うためのフォルダ。
 │   ├── *.md
-│   └── original_md/        # 差分検出用のファイル
+│   └── original_md/        # 差分検出用のファイル。基本的に触らない
 │       └── *_origina.md
 ├── exports/                # proofreadで保存をするとこちらに差分付きでdocxファイルが作成される。
 │   ├── *.docx
