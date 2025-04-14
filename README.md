@@ -54,7 +54,7 @@ VScodeのextentionです。
 .
 ├── .vscode                 # VScodeの設定ファイルや自動実行のshellscriptが入っている
 ├── .textlintrc             # textlint用の設定ファイル。
-├── original                # originalの原稿を入れるフォルダ。
+├── original/               # originalの原稿を入れるフォルダ。
 ├── proofread/              # 校正を行うためのフォルダ。
 │   ├── *.md
 │   └── original_md/        # 差分検出用のファイル。基本的に触らない
