@@ -11,7 +11,7 @@ if [ "$EXTENSION" = "docx" ]; then
 elif [ "$EXTENSION" = "doc" ]; then
   pandoc "$FULLPATH" -f docx -t markdown_strict -o "proofread/original_md/${BASENAME}_original.md"
 elif [ "$EXTENSION" = "md" ]; then
-  :
+  cp "$FULLPATH" "proofread/original_md/${BASENAME}_original.md"
 else
   pandoc "$FULLPATH" -f markdown+hard_line_breaks -t markdown_strict -o "proofread/original_md/${BASENAME}_original.md"
 fi
