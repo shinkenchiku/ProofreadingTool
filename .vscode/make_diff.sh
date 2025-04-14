@@ -6,11 +6,7 @@ if [ -z "$1" ]; then
 fi
 
 FULLPATH="$1"
-REPO_ROOT=$(git rev-parse --show-toplevel)
-RELATIVE_PATH="${FULLPATH#$REPO_ROOT/}"
-
 FILENAME=$(basename "$FULLPATH")
-EXTENSION="${FILENAME##*.}"
 BASENAME="${FILENAME%.*}"
 
 mkdir -p tmp exports
