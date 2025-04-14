@@ -53,14 +53,15 @@ else
     fi
 
     PANDOC_VERSION="3.6.4"
-    PANDOC_FILENAME="pandoc-${PANDOC_VERSION}-${PANDOC_ARCH}-macOS.zip"
+    PANDOC_FILENAME="pandoc-${PANDOC_VERSION}-${PANDOC_ARCH}-macOS.pkg"
     PANDOC_URL="https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/${PANDOC_FILENAME}"
 
     echo "📦 Pandoc をダウンロード中..."
     curl -L -o "$PANDOC_FILENAME" "$PANDOC_URL"
-    unzip -q "$PANDOC_FILENAME"
-    sudo cp -r pandoc-${PANDOC_VERSION}/* /usr/local/
-    echo "✅ Pandoc をインストールしました"
+    echo "📦 Pandoc インストーラーを起動します（手動でインストール）..."
+    open "$PANDOC_FILENAME"
+    echo "💤 Pandoc のインストールが終わったら Enter を押してください"
+    read -p "続行するには Enter を押してください... "
 fi
 
 ############################################
