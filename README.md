@@ -5,7 +5,17 @@
 このリポジトリは新建築社グループにおいて校正の自動化および均一化を目指すためのリポジトリです。
 次のステップに則りツールをインストールしていくことによってVScode（テキストエディター）の作業において、校正の自動化および問題のある点のハイライトを行います
 
-## 必要なもの
+## Installation
+
+### Macの場合
+
+`mac.command`を実行してください
+
+### Windowsの場合
+
+準備中
+
+## インストールされたもの
 
 ### APP
 
@@ -31,16 +41,6 @@ VScodeのextentionです。
 
 - [File Watcher](https://marketplace.visualstudio.com/items/?itemName=appulate.filewatcher)
   - ファイルの変更を監視する拡張機能。今回はdocsのファイルをmdにしたり、校正後の変更を伝えるためのファイルを自動で作成するために利用。
-
-## Installation
-
-### Macの場合
-
-`mac.command`を実行してください
-
-### Windowsの場合
-
-準備中
 
 ## How To
 
