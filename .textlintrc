@@ -5,7 +5,7 @@
         "./textlint_rules/dictionary/jutaku/hiraki.yml",
         "./textlint_rules/dictionary/jutaku/okuri.yml",
         "./textlint_rules/dictionary/jutaku/tozi.yml",
-        "./textlint_rules/dictionary/texkbooster.yml"
+        "./textlint_rules/dictionary/jutaku/hyoki.yml"
       ]
     },
     "@textlint-ja/morpheme-match": {

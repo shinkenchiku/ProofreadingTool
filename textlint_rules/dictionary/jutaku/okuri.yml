@@ -38,4 +38,44 @@ rules:
     specs:
       - from: 押し入れは通常より広く
         to:   押入れは通常より広く
-  
+  - expected: 切妻
+    pattern: 切り妻
+    prh: 間違いやすい送りがな
+  - expected: 組み立てる
+    pattern: 組立てる
+  - expected: 仕上げ
+    pattern: /仕上(?!がり|げ|る)/
+    prh: 仕上げに統一
+    specs:
+      - from: 仕上
+        to:   仕上げ
+      - from: 仕上が良い
+        to:   仕上げが良い
+      - from: 仕上がりが良い
+        to:   仕上がりが良い
+      - from: 仕上げが良い
+        to:   仕上げが良い
+      - from: 仕上るところ
+        to:   仕上るところ
+  - expected: 手摺り
+    pattern: /手摺(?!り)/
+    specs:
+      - from: 手摺り
+        to:   手摺り
+      - from: 手摺
+        to:   手摺り
+  - expected: 引き違い
+    pattern: 引違い
+  - expected: 吹抜け
+    pattern: 吹き抜け
+  - expected: 街並み
+    pattern: /街並(?!み)/
+    specs:
+      - from: 街並み
+        to:   街並み
+      - from: 街並
+        to:   街並み
+  - expected: 見積り
+    pattern: 見積もり
+  - expected: 見出す
+    pattern: 見い出す

@@ -1,0 +1,93 @@
+version: 2025.04.14
+rules:
+  - expected: アイデア
+    pattern: アイディア
+    prh: 表記統一
+    specs:
+      - from: アイディアがある
+        to:   アイデアがある
+  - expected: ヴォリューム
+    pattern: ボリューム
+    prh: 表記統一
+    specs:
+      - from: ボリューム感を出す
+        to:   ヴォリューム感を出す
+  - expected: 現し$1
+    patterns:
+      - /あらわし(?!た)/
+      - /表し(?!た)/
+      - /露し(?!た)/
+    prh: 誤字の可能性 もしかして工法の「現し」ではないですか？
+  - expected: 現れる
+    patterns:
+      - あらわれる
+      - 表れる
+      - 露れる
+    prh: 誤字の可能性 もしかして工法的な「現れる」ではないですか？
+  - expected: 金ごて
+    pattern: 金ゴテ
+    prh: 表記統一
+  - expected: キャンティ$1
+    patterns:
+      - /キャンチ/
+      - /カンチ(レバー)/
+    prh: 表記統一
+    specs:
+      - from: キャンチレバー
+        to:   キャンティレバー
+      - from: カンチレバー
+        to:   キャンティレバー
+      - from: カンチガイ
+        to:   カンチガイ
+  - expected: kg
+    patterns:
+      - Kg
+      - キログラム
+      - ｷﾛｸﾞﾗﾑ
+      - ㌔グラム
+  - expected: クローゼット
+    pattern: クロゼット
+  - expected: 珪酸カルシウム板
+    pattern: ケイカル板
+  - expected: コンピュータ
+    pattern: コンピューター
+  - expected: サステナブル
+    pattern: サステイナブル
+  - expected: 堅はぜ葺き
+    patterns:
+      - 堅てハゼ葺き
+      - 立てはぜ葺き
+    prh: 表記統一
+  - expected: 鏤める
+    pattern: 散りばめる
+  - expected: 共に
+    patterns:
+      - 供に
+      - ともに
+  - expected: 2世帯
+    pattern: 二世帯
+  - expected: はぜ葺き
+    pattern: ハゼ葺き
+  - expected: ピクチャ
+    patterns:
+      - ピクチャー
+      - ピクチュア
+  - expected: 日射し
+    patterns:
+      - 日差し
+      - 陽射し
+  - expected: ファニチャー
+    pattern: ファニチュア
+  - expected: ベニヤ
+    pattern: ベニア
+  - expected: ボキャブラリー
+    pattern: ヴォキャブラリー
+  - expected: モジュール
+    pattern: モデュール
+  - expected: ラインアップ
+    pattern: ラインナップ
+  - expected: YKK AP
+    patterns:
+      - YKK
+      - YKKAP
+      - ykkap

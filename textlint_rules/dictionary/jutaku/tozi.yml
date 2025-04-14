@@ -6,3 +6,52 @@ rules:
   - expected: 当たり前
     pattern: あたり前
     prh: ひらがなではなく漢字に
+  - expected: 及ぶ
+    pattern: およぶ
+    prh: ひらがなではなく漢字に
+  - expected: 方がた
+    pattern: かたがた
+    prh: ひらがなではなく漢字に
+    specs:
+      - from: そのようなかたがたにとっては
+        to: そのような方がたにとっては
+  - expected: 面白い
+    pattern: おもしろい
+    prh: ひらがなではなく漢字で
+    specs:
+      - from: おもしろいように
+        to:   面白いように
+  - expected: 子供
+    pattern: 子ども
+    prh: ひらがなではなく漢字で
+    specs:
+      - from: 子どもともども
+        to:   子供ともども
+  - expected: 仕掛ける
+    pattern: 仕かける
+    prh: ひらがなではなく漢字で
+  - expected: 確かに
+    pattern: たしかに
+    prh: ひらがなではなく漢字で
+  - expected: 近付く
+    pattern: 近づく
+    prh: ひらがなではなく漢字で
+  - expected: 散らばる
+    pattern: ちらばる
+    prh: ひらがなではなく漢字で
+  - expected: 繋ぐ
+    pattern: つなぐ
+  - expected: 何だ
+    pattern: なんだ
+  - expected: 根差す
+    pattern: 根ざす
+  - expected: 始める
+    pattern: はじめる
+  - expected: 雛壇
+    pattern: ひな壇
+  - expected: 吹付け
+    pattern: 吹き付け
+  - expected: 自ら
+    pattern: みずから
+  - expected: 緩やか
+    pattern: ゆるやか

@@ -94,20 +94,137 @@ rules:
   - expected: おのおの
     pattern: 各々
     prh: 漢字で書かず、ひらがなで書くと読みやすくなります
-  - expected: 面白い
-    pattern: おもしろい
+    specs:
+      - from: 各々の要素が
+        to:   おのおのの要素が
   - expected: および
     pattern: 及び
-  - expected: 及ぶ
-    pattern: およぶ
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+    specs:
+      - from: A及びB
+        to:   AおよびB
   - expected: かかる
     pattern: 掛かる
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+    specs:
+      - from: 掛かる折に
+        to:   かかる折に
   - expected: かかわる
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
     patterns:
       - 関わる
       - 係る
+    specs:
+      - from: これに関わることで
+        to:   これにかかわることで
+      - from: これに係ることで
+        to:   これにかかわることで
   - expected: きわめて
     pattern: 極めて
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
   - expected: 気づく
     pattern: 気付く
-  
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: かたち
+    pattern: /(?<![一-龯])形(?![一-龯])/
+    prh: 「かたち」はひらがなで書く
+    specs:
+      - from: この形は変だ
+        to:   このかたちは変だ
+      - from: 三角形が美しい
+        to:   三角形が美しい
+      - from: 形而上学を学ぶ
+        to:   形而上学を学ぶ
+  - expected: くださ$1
+    pattern: /下さ(る|った|い)?/
+    prh: 「下さ」はひらがなで「くださ」と書くと読みやすくなります
+    specs:
+      - from: ご自愛下さい
+        to:   ご自愛ください
+      - from: 下さった
+        to:   くださった
+      - from: 下さい
+        to:   ください
+      - from: 下さる
+        to:   くださる
+  - expected: くる
+    pattern: 来る
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: さまざま
+    pattern: 様々
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: したがって
+    pattern: 従って
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: しれない
+    pattern: 知れない
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: すでに
+    pattern: 既に
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: すべて
+    pattern: 全て
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: ただし
+    pattern: 但し
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: $1たち
+    pattern: /(私|僕|俺|彼|彼女|君|お前|我|子供|人)達/
+    prh: 人名代名詞＋「達」は「たち」とひらがなで書くと自然です
+    specs:
+      - from: 私達は出発します
+        to:   私たちは出発します
+      - from: 子供達が遊んでいる
+        to:   子供たちが遊んでいる
+      - from: 達人の技
+        to:   達人の技
+      - from: 先達の知恵
+        to:   先達の知恵
+  - expected: たとえば
+    pattern: 例えば
+  - expected: のため
+    pattern: の為
+  - expected: つける
+    pattern: 付ける
+  - expected: つくる
+    patterns:
+      - 作る
+      - 造る
+  - expected: 手がける
+    pattern: 手掛ける
+  - expected: 手がかり
+    pattern: 手掛かり
+  - expected: でき上がる
+    pattern: 出来上がる
+  - expected: できる
+    pattern: 出来る
+  - expected: 手づくり
+    patterns:
+      - 手作り
+      - 手造り
+  - expected: したところ
+    pattern: した所
+  - expected: とらえる
+    pattern: 捉える
+  - expected: ない
+    pattern: 無い
+  - expected: はじめて
+    pattern: 始めて
+  - expected: はじめから
+    pattern: 初めから
+  - expected: 人びと
+    pattern: 人々
+  - expected: ほしい
+    pattern: 欲しい
+  - expected: まったく
+    pattern: 全く
+  - expected: もつ
+    pattern: 持つ
+  - expected: もっとも
+    pattern: 最も
+  - expected: しやすい
+    pattern: し易い
+  - expected: よい
+    pattern: 良い
+  - expected: ような
+    pattern: 様な
