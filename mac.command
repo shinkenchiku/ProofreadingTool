@@ -27,7 +27,7 @@ if command -v node >/dev/null 2>&1; then
     echo "✅ Node.js はすでにインストールされています"
 else
     echo "📦 Node.js をダウンロード中..."
-    NODE_URL=href="https://nodejs.org/dist/v22.14.0/node-v22.14.0.pkg"
+    NODE_URL="https://nodejs.org/dist/v22.14.0/node-v22.14.0.pkg"
     echo "🔗 ダウンロードURL: $NODE_URL"
     curl -L -o node.pkg "$NODE_URL"
     echo "▶️ Node.js インストーラーを起動します（手動でインストール）..."
