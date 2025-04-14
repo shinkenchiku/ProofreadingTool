@@ -9,7 +9,7 @@
 
 ### Macの場合
 
-`mac.command`を実行してください
+`mac.command`を右クリックのメニューから実行してください
 
 ### Windowsの場合
 

@@ -27,12 +27,19 @@ if command -v node >/dev/null 2>&1; then
     echo "✅ Node.js はすでにインストールされています"
 else
     echo "📦 Node.js をダウンロード中..."
-    NODE_URL=$(curl -s https://nodejs.org/en | grep -o 'https://nodejs.org/dist/v[^"]*/node-v[^"]*-pkg\.pkg' | head -n 1)
+    NODE_URL=$(curl -s https://nodejs.org/en | grep -oE 'https://nodejs.org/dist/v[^"]+/node-v[^"]+\.pkg' | head -n 1)
+
+    if [ -z "$NODE_URL" ]; then
+        echo "❌ Node.js のダウンロードURLが見つかりませんでした。中止します。"
+        exit 1
+    fi
+
+    echo "🔗 ダウンロードURL: $NODE_URL"
     curl -L -o node.pkg "$NODE_URL"
     echo "▶️ Node.js インストーラーを起動します（手動でインストール）..."
     open node.pkg
     echo "💤 Node.js のインストールが終わったら Enter を押してください"
-    read -p "続行するには Enter を押してください..."
+    read -p "続行するには Enter を押してください... "
 fi
 
 ############################################
