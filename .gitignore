@@ -1,0 +1,24 @@
+# node_modules を無視
+node_modules/
+
+# proofread/.empty と proofread/original_md/.empty 以外を無視
+/proofread/*
+!/proofread/.empty
+!/proofread/original_md/
+/proofread/original_md/*
+!/proofread/original_md/.empty
+
+# exports/.empty と exports/SimpleUI/.empty 以外を無視
+/exports/*
+!/exports/.empty
+!/exports/SimpleUI/
+/exports/SimpleUI/*
+!/exports/SimpleUI/.empty
+
+# tmp/.empty 以外を無視
+/tmp/*
+!/tmp/.empty
+
+# original/.empty 以外を無視
+/original/*
+!/original/.empty

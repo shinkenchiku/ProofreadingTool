@@ -1,0 +1,41 @@
+version: 2025.04.11
+rules:
+  - expected: 上げる
+    pattern: 上る
+    prh: 間違いやすい送りがな
+    specs:
+      - from: 床面を上る
+        to:   床面を上げる
+  - expected: 入口
+    pattern: 入り口
+    prh: 「ハイリグチ」ではなく「イリグチ」を使う
+    specs:
+      - from: 入り口は全面ガラス張り
+        to:   入口は全面ガラス張り
+  - expected: 打放し
+    pattern: 打ち放し
+    prh: 表記の統一
+    specs:
+      - from: 打ち放しコンクリート
+        to:   打放しコンクリート
+  - expected: 奥行き
+    pattern: /奥行(?!き)/
+    prh: 間違いやすい送りがな
+    specs:
+      - from: 奥行きのある間取り
+        to:   奥行きのある間取り
+      - from: 奥行のある間取り
+        to:   奥行きのある間取り
+  - expected: 押さえ
+    pattern: 押え
+    prh: 間違いやすい送りがな
+    specs:
+      - from: 海の見える土地を押えた
+        to:   海の見える土地を押さえた
+  - expected: 押入れ
+    pattern: 押し入れ
+    prh: 間違いやすい送りがな
+    specs:
+      - from: 押し入れは通常より広く
+        to:   押入れは通常より広く
+  

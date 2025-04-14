@@ -1,0 +1,8 @@
+version: 2025.04.11
+rules:
+  - expected: 僅か
+    pattern: わずか
+    prh: ひらがなではなく漢字に
+  - expected: 当たり前
+    pattern: あたり前
+    prh: ひらがなではなく漢字に

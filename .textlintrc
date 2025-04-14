@@ -1,0 +1,17 @@
+{
+  "rules": {
+    "prh": {
+      "rulePaths": [
+        "./textlint_rules/dictionary/jutaku/hiraki.yml",
+        "./textlint_rules/dictionary/jutaku/okuri.yml",
+        "./textlint_rules/dictionary/jutaku/tozi.yml",
+        "./textlint_rules/dictionary/texkbooster.yml"
+      ]
+    },
+    "@textlint-ja/morpheme-match": {
+      "dictionaryPathList": ["./textlint_rules/morpheme_match/list.js"]
+    },
+    "textlint-rule-preset-japanese": true,
+    "ja-no-orthographic-variants": true
+  }
+}

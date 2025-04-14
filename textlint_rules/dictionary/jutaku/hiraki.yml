@@ -1,0 +1,113 @@
+version: 2025.04.11
+rules:
+  - expected: さらに
+    pattern:  /(変)?更に/
+    regexpMustEmpty: $1
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+    specs:
+      - from: 変更に
+        to:   変更に
+  - expected: こと
+    pattern:  /(記|大|仕|返|無|食|見|議|当)?事(?!情|件|前|後|象|例|実|体|態|項|務|業|柄|故)/
+    regexpMustEmpty: $1
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+    specs:
+      - from: ある事
+        to:   あること
+      - from: 記事
+        to:   記事
+      - from: 事件
+        to:   事件
+      - from: 事象
+        to:   事象
+      - from: 事柄
+        to:   事柄
+      - from: 当事
+        to:   当事
+  - expected: いえ
+    pattern:  言え
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: いう
+    pattern:  言う
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: いわ
+    pattern:  言わ
+    prh: 呼ぶ、で代替するか漢字で書かず、ひらがなで書くと読みやすくなります。
+  - expected: わが
+    pattern: 我が
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: わりと
+    pattern: 割と
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: われわれ
+    pattern: 我々
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: ひとり
+    patterns: 
+      - 一人
+      - 1人
+      - １人
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: ふたり
+    patterns: 
+      - 2人
+      - ２人
+      - 二人
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: ひとつ
+    patterns: 
+      - 一つ
+      - 1つ
+      - １つ
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: ふたつ
+    patterns: 
+      - 2つ
+      - ２つ
+      - 二つ
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: ありか
+    patterns:
+      - 在り処
+      - 在処
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: ある
+    pattern: 在る
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: あり
+    pattern: 有り
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: いただく
+    pattern: 頂く
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: いちばん
+    patterns:
+      - 1番
+      - 一番
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: いっぱい
+    pattern: 一杯
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: いまだ
+    pattern: 未だ
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: おのおの
+    pattern: 各々
+    prh: 漢字で書かず、ひらがなで書くと読みやすくなります
+  - expected: 面白い
+    pattern: おもしろい
+  - expected: および
+    pattern: 及び
+  - expected: 及ぶ
+    pattern: およぶ
+  - expected: かかる
+    pattern: 掛かる
+  - expected: かかわる
+    patterns:
+      - 関わる
+      - 係る
+  - expected: きわめて
+    pattern: 極めて
+  - expected: 気づく
+    pattern: 気付く
+  
