@@ -4,12 +4,12 @@
   "filewatcher.commands": [
     {
       "match": "proofread/.*\\.(txt|text|md)$",
-      "cmd": "cd ${workspaceRoot} && .vscode/make_diff.sh ${file} >> ./tmp/diff.log 2>&1",
+      "cmd": "cd \"${workspaceRoot}\" && .vscode/make_diff.sh \"${file}\" >> ./tmp/diff.log 2>&1",
       "event": "onFileChange"
     },
     {
       "match": "original/.*\\.(txt|text|md|docx|rtf|csv)$",
-      "cmd": "cd ${workspaceRoot} && .vscode/original_copy.sh ${file} >> ./tmp/diff.log 2>&1",
+      "cmd": "cd \"${workspaceRoot}\" && .vscode/original_copy.sh \"${file}\" >> ./tmp/diff.log 2>&1",
       "event": "onFileCreate"
     }
   ]

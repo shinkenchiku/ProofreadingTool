@@ -14,12 +14,12 @@ mkdir -p tmp exports
 PANDIFF="./node_modules/.bin/pandiff"
 
 # pandiff で差分出力
-"$PANDIFF" proofread/original_md/"$BASENAME"_original.md proofread/$BASENAME.md \
+"$PANDIFF" "proofread/original_md/${BASENAME}_original.md" "proofread/${BASENAME}.md" \
   -f markdown \
   -t docx \
   -o "exports/${BASENAME}.docx"
 
-"$PANDIFF" proofread/original_md/"$BASENAME"_original.md proofread/$BASENAME.md \
+"$PANDIFF" "proofread/original_md/${BASENAME}_original.md" "proofread/${BASENAME}.md" \
   -f markdown \
   -s \
   -o "exports/SimpleUI/${BASENAME}.html"
